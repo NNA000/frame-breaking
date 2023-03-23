@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+
+<style>
+    .my-div {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
+</style>
+<body>
+
+<h1>The iframe element</h1>
+<br>
+<div class="my-div">
+
+  <iframe src="http://192.168.100.136:5000/listar" title="HOLA"></iframe>
+</div>
+
+<br>
+<div class="my-div">
+
+  <iframe src="http://192.168.100.136:5000/listar" title="HOLA"> </iframe>
+</div>
+
+
+
+
+<div class="my-div">
+    <form target="myIframe" action="http://192.168.100.136:5000/" method="post">
+
+        <input type="text" value="someval" name="comida"/>
+        <input type="submit">
+    </form>
+
+    <iFrame src="" name="myIframe"></iFrame>
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+.container-img {
+    width: 300px;
+    height: 100%;
+}
+
+.border-customcolor {
+    border-color: #A58D6F;
+    border-width: 2px;
+}
+
+.container-img img {
+    width: 100%;
+    height: auto;
+}
+
+.bg-customblue {
+    color: white;
+    background-color: #0e376a;
+}
+
+.bg-customocolor {
+    color: white;
+    background-color: #A58D6F;
+}
+
+.text-customcolor {
+    /*color: #A58D6F;*/
+    color: white;
+}
+
+.text-customblue {
+    color: #0e376a;
+}
+
+.bg-customcolor {
+    /*background-color: #A58D6F;
+    color: #0e376a;
+    font-weight: 900;
+    outline: #0e376a;
+    border-color: #0e376a;*/
+    background-color: white;
+    color: #0e376a;
+    font-weight: 900;
+    outline: #0e376a;
+    border-color:  #0e376a;
+}
+
+.bg-customcolor:hover {
+    outline: #A58D6F;
+    background-color: #0e376a;
+    color: white;
+    font-weight: 900;
+    border-color: #0e376a;
+    /*outline: #A58D6F;
+    background-color: #0e376a;
+    color: #A58D6F;
+    font-weight: 900;
+    border-color: #A58D6F;*/
+}
+.linksabermas{
+    color: rgb(255, 193, 0);
+}
+/*.bg-customcolor:focus {
+    outline: #A58D6F;
+    background-color: #0e376a;
+    color: #A58D6F;
+    font-weight: 900;
+    border-color: #A58D6F;
+}*/
+
+.min-heigth {
+    min-height: 600px;
+}
+
+.centrar-vertical {
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+.bg-portal {
+    /*background-image: url("../../imgs/fondo1.jpg");*/
+    background-color: rgb(32, 119, 160);
+}
+
+.bg-portal2 {
+    background-image: url("../../imgs/logo1.jpg"),
+    url("../../imgs/fondo1.jpg'");
+    background-position: left top, left top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+hr.divisor {
+    border: 2px solid #A58D6F;
+    border-radius: 1px;
+}
+
+img.rs {
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.bg-customblueligth {
+    background-color: #181D31;
+}
+
+.bg-custombluedark2 {
+    background-color: rgb(13, 13, 13);
+}
+
+.bg-custombluedark {
+    /*background-color: rgb(13, 18, 20);*/
+    background-color: rgb(13, 18, 20);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(rgb(13, 13, 13), rgb(13, 18, 20));
+}

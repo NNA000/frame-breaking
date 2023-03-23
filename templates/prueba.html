@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        SIC |
+        {% endblock %}
+    </title>
+    <!-- Styles-->
+    <link rel="icon" href="{{url_for('static',filename='own/imgs/logo1.png')}}" type="image/x-icon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{url_for('static',filename='third/plugins/fontawesome-free/css/all.min.css')}}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{url_for('static',filename='third/dist/css/adminlte.min.css')}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet">
+    {% block styles %}
+    {% endblock %}
+    <!-- Frame Breaking Script-->
+    <style id="antiClickjack">
+        body {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        if (self === top) {
+            var antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <!-- End Frame Breaking Script -->
+</head>
+
+
+<style>
+    body {
+        /*/font-family: 'Alumni Sans', sans-serif;
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;*/
+        font-family: 'Exo', sans-serif;
+        /*font-family: 'Yantramanav', sans-serif;*/
+    }
+
+    .outer-loader {
+        width: auto;
+        height: 100vh;
+        /*border: dotted hsl(0, 0%, 67%) 2px;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #A5ABBD;
+    }
+
+    .inner-loader-img {
+        text-align: center;
+        /*background: url("{{url_for('static',filename='/own/imgs/Square-Loading.gif')}}") no-repeat center;*/
+        /*background-size: contain;*/
+        /*background-color: #A5ABBD;
+        /*height: 50%;*/
+        /*width: 50%;*/
+    }
+
+    .pcustom {
+        position: relative;
+        top: 35%;
+        transform: translateY(-50%);
+        padding: 35px;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #0E376A;
+    }
+</style>
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+
+    <div class="wrapper ">
+        {% block otroselementos %}
+        {% endblock %}
+
+        {% block navbar %}
+        {% endblock %}
+
+        {% block asidemenu %}
+        {% endblock %}
+        {% block maincontent %}
+        {% endblock %}
+        <div>
+            <pre>{{ json_data }}</pre>
+            <P>COMIDA</P>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="{{url_for('static',filename='/third/plugins/jquery/jquery.min.js')}}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{url_for('static',filename='/third/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{url_for('static',filename='/third/dist/js/adminlte.min.js')}}"></script>
+    <!-- include 'smaars/loader.html' -->
+    <!-- Para manejar el autologout -->
+    <script type="text/javascript">
+
+            $.ajax({
+                type : "POST",
+                url  : "{{url_for('index')}}",
+                //dataType: "json",
+                data : {comida:'asdsaasdasdd'},
+            }).done(function(response){
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(response, 'text/html');
+                const jsonText = doc.querySelector('#json-id').textContent;
+                const jsonData = JSON.parse(jsonText);
+                console.log(jsonData);
+
+
+            }).fail(function(R){
+                console.log(R)
+                alert('Error al intentar obtener un captcha nuevo')
+
+            })
+    </script>
+
+    {% block login_script %}
+    {% endblock %}
+
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+
+</html>

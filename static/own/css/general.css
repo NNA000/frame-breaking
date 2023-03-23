@@ -1,0 +1,181 @@
+.cardmodulo:hover {
+    box-shadow: 4px 4px 4px #0E376A;
+    transform: scale(1.04);
+}
+
+.centrar-vertical {
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+.container-img {
+    width: 250px;
+    height: 100%;
+}
+
+.container-img img {
+    width: 100%;
+    height: auto;
+}
+
+.underlinetext {
+    text-decoration: underline;
+}
+
+.container-custom {
+    /*width: 100%;/*whatever size you want your container*/
+    /*border: 3px solid teal;*/
+    display: flex;
+    /*Make sure to call this on your container*/
+    align-items: stretch;
+    /*stretches all cards same height*/
+    justify-content: space-around;
+    /*some space between cards*/
+}
+
+.text-colory {
+    color: #fff;
+}
+
+.text-colorb {
+    color: #0E376A;
+}
+
+.btn-colorb {
+    color: #0E376A;
+    background-color: #a58d6f;
+    border-color: #a58d6f;
+}
+
+.btn-colorb:hover {
+    color: #a58d6f;
+    background-color: #0E376A;
+    border-color: #0E376A;
+}
+
+.btn-colory {
+    color: #a58d6f;
+    background-color: #0E376A;
+    border-color: #0E376A;
+}
+
+.btn-colory:hover {
+    color: #0E376A;
+    background-color: #a58d6f;
+    border-color: #a58d6f;
+}
+
+.bg-y {
+    color: white;
+    background-color: #0E376A;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    /*border-color: rgb(255,102,203);*/
+    border-color: white;
+}
+.bg-aniadir {
+    background-color: #97ACCF;
+    color: #072227;
+    border-color: #072227;
+}
+
+.bg-aniadir:hover {
+    background-color: #072227;
+    color: #97ACCF;
+    border-color: #97ACCF;
+}
+.bg-elementodisabled {
+    background-color: #203a4d;
+    color: white;
+}
+.bg-elementoabled {
+    background-color: #0061A8;
+    color: white;
+}
+.bg-eliminar {
+    background-color: #833e58;
+    color: white;
+    border-color: white;
+}
+
+.bg-eliminar:hover {
+    background-color: white;
+    color: #833e58;
+    border-color: #833e58;
+}
+
+.bg-editar {
+    background-color: #678983;
+    color: white;
+    border-color: white;
+}
+
+.bg-editar:hover {
+    background-color: white;
+    color: #678983;
+    border-color: #678983;
+}
+/*Usado para tener las imágenes de las redes sociales en una lista*/
+.img-listaredsocial{
+    height: auto; 
+    width: auto; 
+    max-width : 40px; 
+    max-height: 40px;
+}
+/*Para agrandar los checkbox para que se vean mejor*/
+.bCheckbox {
+    transform: scale(1.3);
+  }
+/*Agregar cursor al pasar por la fila de una tabla*/
+.table-hovercursor tr{
+    cursor: pointer;
+}
+/*Estilo para tabla con opciones seleccionable*/
+.headtablegradient{
+    background-image: linear-gradient(#DDE1E6, #DDDDDD);
+    /*DDE1E6*/
+}
+.opcionesenfila{
+    color: #21547F;
+}
+/*Estilo para los filtros de datatable en la parte superior*/
+tfoot.datatable {
+    display: table-header-group;
+}
+.cursordown{    
+    cursor: s-resize;
+    font-size: 1.3em; 
+}
+.cursorup{
+    cursor: n-resize;
+    font-size: 1.3em; 
+}
+.cursordown:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    font-size: 1.4em; 
+  }
+.cursorup:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    font-size: 1.4em; 
+ }
+ .headercursororder{
+    font-size: 1.3em;
+ }
+ .move-el{
+    font-size: 1.5em;
+    color: rgb(112, 173, 71)	;
+    cursor: col-resize;    
+ }
+ .fixed-ordenador {    
+    position: fixed;
+    top: 10%;
+    margin-right:0px;
+    left: 90%;
+}
+ 
